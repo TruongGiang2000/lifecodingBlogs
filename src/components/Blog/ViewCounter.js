@@ -6,7 +6,7 @@ const ViewCounter = ({slug, noCount = false, showCount = true}) => {
 
 	useEffect(() => {
 		if (!noCount) {
-			incrementView()
+			// incrementView()
 		}
 	}, [slug, noCount])
 
