@@ -1,0 +1,62 @@
+---
+title: "Sử dụng useEffect sao cho hiệu quả trong React ?"
+description: Chắc hẳn những bạn nào đang là một Mobile Developer hay Web Developer với React thì cũng đã nghe tới cụm từ Hook. Hook là một tính năng được thêm từ React 16.8. Trong bài này mình chỉ chia sẻ với các bạn một số tips sao cho sử dụng useEffect một cách hiệu quả nhất mà không bị out trình nhé.
+image: "../../public/blogs/useEffect/useEffect.jpg"
+publishedAt: "2024-05-01"
+updatedAt: "2024-05-01"
+author: "giangnvt"
+isPublished: true
+tags: 
+- React
+---
+<div style={{lineHeight:2}}>
+Chắc hẳn những bạn nào đang là một Mobile Developer hay Web Developer với React thì cũng đã nghe tới cụm từ Hook. Hook là một tính năng được thêm từ React 16.8. Trong bài này mình chỉ chia sẻ với các bạn một số tips sao cho sử dụng useEffect một cách hiệu quả nhất mà không bị out trình nhé. Còn về Hook thì nếu bạn nào chưa biết thì có thể vào đây https://reactjs.org/docs/hooks-intro.html để hiểu rõ hơn về Hook nhé.
+</div>
+<div style={{lineHeight:2}}>
+Đầu tiên thì useEffect được dùng như để thay thế __componentDidMount__, __componentDidUpdate__ và __componentWillUnmount__ trong __Class Component__. Sau đây mình sẽ trình bày từng cái một để các bạn có thể hiểu rõ hơn.
+</div>
+<Image
+  src="/blogs/useEffect/useEffect_1.webp"
+  width="1024"
+  height="284"
+  alt="Image"
+  sizes="100vw"
+/>
+
+<div style={{lineHeight:2}}>
+Trên đây useEffect được dùng như để thay thế __componentDidMount__, useEffect cho bạn truyền 2 tham số, thứ nhất là một __Callback Function__ và thứ 2 là một __Dependency__ và ở đây mình truyền tham số thứ 2 là một mảng rỗng tức là mình đang muốn function này chỉ được gọi lần đầu tiên khi khởi tạo một màn hình. Ở đây khi vô màn hình mình muốn xác nhận là Device này đang hỗ trợ xác thực bằng gương mặt hay vân tay nên mình chỉ cần gọi một lần duy nhất. Ở đây mình không tách function ra vì mình muốn để các bạn dễ hiểu, để sử dụng một cách hiệu quả thì các bạn có thể tách từng chức năng cần gọi ra và gọi nó trong useEffect không những các bạn dễ quản lí từng chức năng một mà các bạn có thể dùng để gọi chỗ khác như onPress chẳng hạn.
+</div>
+
+<Image
+  src="/blogs/useEffect/useEffect_2.webp"
+  width="1024"
+  height="195"
+  alt="Image"
+  sizes="100vw"
+/>
+
+<div style={{lineHeight:2}}>
+Tiếp theo mình sẽ giới thiệu các bạn useEffect được dùng như __componentDidUpdate__ và __componentWillUnmount__.
+Thật ra thì các bạn thay vì truyền tham số thứ 2 là mảng rỗng như mình nói ở trên thì các bạn truyền vào mảng một hoặc nhiều biến, thì hàm Callback sẽ được gọi lại mỗi khi các giá trị trong mảng thay đổi, có một điều mà các bạn phải lưu ý đó là biến được truyền vào phải là một __State__ hoặc __Redux Store's State__ thì mới có hiệu quả. Ở đây hàm sẽ được gọi lại mỗi khi biến thay đổi nên phải thật cẩn thận khi bỏ các biến vào __Dependency__
+để tránh việc gọi lại hàm không cần thiết và tối ưu Performance. Cuối cùng là làm sao để __Clean up__ một screen, các bạn chỉ cần return một arrow function là useEffect sẽ hoạt động như __componentWillUnmount__,
+cách này thường dùng để __cleanTimeout__ hay __cleanInterval__ hoặc remove một listener nào đấy để tránh việc chưa clean up screen này mà đã nhảy qua screen khác, như vậy sẽ làm cho performance không được hoặc động trơn tru hoặc các bạn sẽ không control được các hành động tiếp theo mà nó sẽ xảy ra.
+</div>
+<Image
+   src="/blogs/useEffect/useEffect_3.webp"
+  width="1023"
+  height="303"
+  alt="Image"
+  sizes="100vw"
+/>
+
+<Image
+   src="/blogs/useEffect/useEffect_4.webp"
+  width="1021"
+  height="246"
+  alt="Image"
+  sizes="100vw"
+/>
+
+<div style={{lineHeight:2}}>
+Những tips ở trên mình đã rút ra được khi mình làm, thật ra hook còn quy định một số rules khi sử dụng nhưng mình sẽ không nói ở đây vì sẽ bị rối nên có thể mình sẽ viết trong bài sau để hướng dẫn các bạn tránh những rules khi xài hook. Nếu các bạn thấy mình còn thiếu gì trong những kiến thức ở trên thì hãy comment nhé. Mình sẽ luôn luôn lắng nghe để cải thiện tốt hơn. Cảm ơn các bạn. Peace!
+</div>

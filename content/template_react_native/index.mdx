@@ -1,0 +1,155 @@
+---
+title: "Cách để tự tạo cho mình một template trên React Native."
+description:  Đối với các bạn làm outsource hoặc các bạn làm nhiều ứng dụng nhỏ để public lên ch-play hoặc appStore. Thông thường các bạn sẽ clone từ source cũ ra sau đó đổi package name, bundleId, name, key,...hoặc các bạn sẽ tạo dự án mới sau đó setup lại các navigation, structure, redux,... yarn lại các thư viện cần thiết. Thì việc này mất khá nhiều thời gian và công sức. Hôm nay mình sẽ hướng dẫn các bạn cách một cách giúp mình tiết kiệm được rất nhiều thời gian và công sức. Let's go.
+image: "../../public/blogs/template/template.jpg"
+publishedAt: "2024-05-01"
+updatedAt: "2024-05-01"
+author: "giangnvt"
+isPublished: true
+tags: 
+- React Native
+---
+<div style={{lineHeight:2}}>
+ Đối với các bạn làm outsource hoặc các bạn làm nhiều ứng dụng nhỏ để public lên ch-play hoặc appStore. Thông thường các bạn sẽ clone từ source cũ ra sau đó đổi package name, bundleId, name, key,...hoặc các bạn sẽ tạo dự án mới sau đó setup lại các navigation, structure, redux,... yarn lại các thư viện cần thiết. Thì việc này mất khá nhiều thời gian và công sức. Hôm nay mình sẽ hướng dẫn các bạn cách một cách giúp mình tiết kiệm được rất nhiều thời gian và công sức. Let's go.
+</div>
+
+## 1. Tạo project react-native.
+<Image
+  src="/blogs/template/template_1.webp"
+  width="1017"
+  height="88"
+  alt="Image"
+  sizes="100vw"
+/>
+Tạo dự án template với lệnh như trên.
+<Image
+  src="/blogs/template/template_2.webp"
+  width="1020"
+  height="79"
+  alt="Image"
+  sizes="100vw"
+/>
+Chạy lệnh trên để trỏ vào folder dự án.
+<Image
+  src="/blogs/template/template_3.webp"
+  width="1020"
+  height="79"
+  alt="Image"
+  sizes="100vw"
+/>
+Chạy lệnh trên để chắc chắn rằng dự án hoạt động tốt.
+
+## 2.Thiết lập cấu trúc và cài đặt các thư viện.
+<div style={{lineHeight:2}}>
+Việc thiết lập cấu trúc ban đầu cho template là cần thiết vì việc này giúp các bạn định hình rõ được các thành phần của dự án, ngoài ra giúp các bạn hiểu rõ được việc các thành phần tác động qua lại như thế nào trong dự án. Một số cấu trúc cơ bản mà các bạn có thể tham khảo https://medium.com/the-andela-way/how-to-structure-a-react-native-app-for-scale-a29194cd33fc, https://viblo.asia/p/xay-dung-cau-truc-project-voi-react-native-Eb85ogR052G,... hoặc các bạn có thể tìm thêm bằng các keywords như design pattern of react native, structure of react native.
+</div>
+<Image
+  src="/blogs/template/template_4.webp"
+  width="662"
+  height="636"
+  alt="Image"
+  sizes="100vw"
+/>
+Đây là cấu trúc mà mình thường hay dùng.
+<div style={{lineHeight:2}}>
+Cài đặt các thư viện thường dùng cũng là một cách rất hay trong việc tạo template, việc cài đặt các thư viện thường dùng giúp các bạn tiết kiệm rất nhiều thời gian trong quá trình làm dự án, cài đặt các thư viện thường dùng như navigation, lodash, moment, dayjs,...hoặc một số thư viện liên quan đến việc setup native như appcenter, sentry,... sẽ giúp các bạn chỉ cần setup 1 lần và dùng lại cho các lần sau.
+</div>
+<Image
+  src="/blogs/template/template_5.webp"
+  width="764"
+  height="844"
+  alt="Image"
+  sizes="100vw"
+/>
+Đây là các thư viện mình thường dùng.
+
+<div style={{lineHeight:2}}>Lưu ý rằng khi các bạn cài thư viện và setup các navigator hoặc structure xong, phải đảm bảo rằng dự án vẫn hoạt động tốt khi build trên android và ios nhé.</div>
+
+## 3.Tải hoặc clone repository.
+<Image
+  src="/blogs/template/template_6.webp"
+  width="1021"
+  height="275"
+  alt="Image"
+  sizes="100vw"
+/>
+## 4.Tạo một git repository để lưu trữ template của bạn.
+<Image
+  src="/blogs/template/template_7.webp"
+  width="1023"
+  height="566"
+  alt="Image"
+  sizes="100vw"
+/>
+Tạo git repository để lưu trữ template.
+## 5.Đẩy template lên git với một số bước.
+<Image
+  src="/blogs/template/template_8.webp"
+  width="1015"
+  height="70"
+  alt="Image"
+  sizes="100vw"
+/>
+Tạo một folder mới với tên mà bạn muốn (ở đây mình tạo với tên là templateToGit).
+<Image
+  src="/blogs/template/template_9.webp"
+  width="1015"
+  height="99"
+  alt="Image"
+  sizes="100vw"
+/>
+Đổi tên dự án bạn init ở step 1 thành "template" (Điều này là bắt buộc).
+<Image
+  src="/blogs/template/template_10.webp"
+  width="1019"
+  height="187"
+  alt="Image"
+  sizes="100vw"
+/>
+Di chuyển folder template vừa đổi tên vào folder mà bạn đã tạo mới.
+<Image
+  src="/blogs/template/template_11.webp"
+  width="1022"
+  height="273"
+  alt="Image"
+  sizes="100vw"
+/>
+Copy 3 files này trong repository mà bạn đã clone về trước đó sau đó paste vào folder mà bạn đã tạo mới.
+<Image
+  src="/blogs/template/template_12.webp"
+  width="1021"
+  height="248"
+  alt="Image"
+  sizes="100vw"
+/>
+Đây là kết quả sau khi mình đã paste.
+<Image
+  src="/blogs/template/template_13.webp"
+  width="1022"
+  height="367"
+  alt="Image"
+  sizes="100vw"
+/>
+Vào file package.json và đổi các field theo ý bạn mong muốn (Lưu ý repository phải là repository mà bạn đã tạo trước đó).
+<Image
+  src="/blogs/template/template_14.webp"
+  width="1021"
+  height="117"
+  alt="Image"
+  sizes="100vw"
+/>
+Tiếp theo chạy các lệnh trên để đẩy template của bạn lên git.
+## 6.Thử nghiệm.
+<Image
+  src="/blogs/template/template_15.webp"
+  width="1016"
+  height="65"
+  alt="Image"
+  sizes="100vw"
+/>
+Chạy lệnh trên để khởi tạo dự án với template mà mình đã setup trước đó.
+<div style={{lineHeight:2}}>
+Sau khi thành công các bạn sẽ thấy được dự án bao gồm các file, screens hoặc các thư viện mà các bạn đã setup trước đó trong template.
+</div>
+## Tổng kết.
+Việc tạo template và tái sử dụng lại nhiều lần sẽ giúp các bạn tiết kiệm nhiều thời gian và công sức. Trong quá trình làm các bạn cũng có thể maintain template để hoàn thiện hơn bằng cách sửa và push lại lên git. Khi sử dụng template các bạn cũng nên lưu ý việc các thư viện bị outdate, cấu trúc hiện tại không phù hợp với dự án mới, hoặc một số thư viện trong template không phù hợp với công nghệ mới mà dự án mới áp dụng. Lời cuối mình không có gì hơn ngoài chúc các bạn thành công. Peace !!
