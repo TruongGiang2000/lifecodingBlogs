@@ -14,10 +14,10 @@ const Footer = () => {
 	return (
 		<footer className="mt-16 rounded-2xl bg-dark dark:bg-[#F3EFE0] m-2 sm:m-10 flex flex-col items-center text-light dark:text-dark">
 			<h3 className="mt-16 font-medium dark:font-bold text-center capitalize text-2xl sm:text-3xl lg:text-4xl px-4">
-				Mục Quan Tâm
+			Interesting Stories
 			</h3>
 			<p className="mt-5 px-4 text-center w-full sm:w-3/5 font-light dark:font-medium text-sm sm:text-base">
-				Hãy đăng kí email của bạn để cập nhật những bài viết mới nhất.
+				Subscribe to learn about new technology and updates.
 			</p>
 
 			<form
