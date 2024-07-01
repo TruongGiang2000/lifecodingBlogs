@@ -7,7 +7,7 @@ const siteMetadata = {
 	language: "vi-vn",
 	theme: "system", // system, dark or light
 	siteUrl: "https://lifecoding.dev/", // your website URL
-	siteLogo: "/logo.png",
+	siteLogo: "/logoWithBackground.png",
 	socialBanner: "/social-banner.png", // add social banner in the public folder
 	email: "truonggiang20001807@gmail.com",
 	github: "https://github.com/TruongGiang2000",
