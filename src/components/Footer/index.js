@@ -59,7 +59,7 @@ const Footer = () => {
 
 			<div className="w-full  mt-16 md:mt-24 relative font-medium border-t border-solid border-light py-6 px-8 flex  flex-col md:flex-row items-center justify-between">
 				<span className="text-center">
-					&copy;2020 GiangNVT. All rights reserved.
+					&copy;2020 Dominich. All rights reserved.
 				</span>
 				<div className="text-center">
 					Made with &hearts; by{" "}
@@ -68,7 +68,7 @@ const Footer = () => {
 						className="underline"
 						target="_blank"
 					>
-						GiangNVT
+						Dominich
 					</a>
 				</div>
 			</div>

@@ -1,7 +1,7 @@
 // please update required information
 const siteMetadata = {
 	title: "Life Coding: Nhật ký lập trình viên",
-	author: "Giangnvt",
+	author: "Dominich",
 	headerTitle: "Life Coding Blog",
 	description: "Một trang Blog về lập trình và cuộc sống",
 	language: "vi-vn",
